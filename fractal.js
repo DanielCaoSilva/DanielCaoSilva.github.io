@@ -1,13 +1,25 @@
-﻿//Graphics in JS
+//Graphics in JS
+
+
 var div = 'graphics'
+mouseX = 0;
+mouseY = 0;
+//document.addEventListener('mousemove', (event) => {
+//    mouseX = event.clientX;
+//    mouseY = event.clientY;
+//});
+
+
 
 var n = 100;
 var x = [], y = [], z = [];
 var dt = 0.015;
 
 for (i = 0; i < n; i++) {
-    x[i] = Math.random() * 2 - 1;
-    y[i] = Math.random() * 2 - 1;
+    //x[i] = Math.random() * 2 - 1;
+    //y[i] = Math.random() * 2 - 1;
+    x[i] = mouseX * 2 - 1;
+    y[i] = mouseY * 2 - 1;
     z[i] = 30 + Math.random() * 10;
 }
 
@@ -54,7 +66,7 @@ function update() {
             },
             frame: {
                 duration: 0,
-                redraw: false
+                redraw: true
             }
         });
 
