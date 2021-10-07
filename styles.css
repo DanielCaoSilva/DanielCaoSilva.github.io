@@ -6,12 +6,25 @@
     scroll-behavior: smooth;
 }
 
+
+#circle {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    height: 5px;
+    width: 5px;
+    border-radius: 30%;
+    border: 2px solid #fff;
+    z-index:10000000;
+    pointer-events: none;
+}
+
+
 .navbar {
     background: #131313;
     height: 80px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     font-size: 1.2rem;
     position: sticky;
     top: 0;
@@ -41,7 +54,7 @@
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .navbar__menu {
@@ -199,6 +212,8 @@
     width: 100%;
     height: 100%;
 }
+/* Test */
+
 
 /* Hero Section */
 .hero {
@@ -558,5 +573,8 @@
         grid-template-columns: 1fr;
     }
 }
+
+
+
 
 
