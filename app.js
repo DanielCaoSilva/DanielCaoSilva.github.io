@@ -2,6 +2,17 @@ const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
 const navLogo = document.querySelector('#navbar__logo');
 
+
+
+/*
+document.addEventListener('mousemove', (event) => {
+    circle.style.left = event.pageX + 'px';
+    circle.style.top = event.pageY + 'px';
+    console.log(circle.style.left);
+});
+circle.style.left = '100px';
+*/
+
 // Display Mobile Menu
 const mobileMenu = () => {
     menu.classList.toggle('is-active');
@@ -61,6 +72,30 @@ const hideMobileMenu = () => {
     }
 };
 
+var circle = document.getElementById('circle');
+
+
+
+const onMouseMove = e => {
+
+    circle.style.left = e.pageX + 'px';
+    circle.style.top = e.pageY + 'px';
+
+    circle.animate(
+        [
+            { transform: 'scale(3,3)' },
+            { transform: 'scale(.5,.5)' },
+            { color: 'blue' },
+            { color: 'red' }
+        ],
+        { duration: 500 });
+};
+document.addEventListener('mousemove', onMouseMove);
 menuLinks.addEventListener('click', hideMobileMenu);
 navLogo.addEventListener('click', hideMobileMenu);
+
+
+
+
+
 
